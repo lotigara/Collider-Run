@@ -4020,7 +4020,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 465581061}
-  player: {fileID: 1890095975}
   col2D: {fileID: 1890095979}
   control: {fileID: 1890095976}
   spriteRender: {fileID: 1890095977}

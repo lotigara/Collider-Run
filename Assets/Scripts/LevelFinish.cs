@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class LevelFinish : MonoBehaviour
 {
     [SerializeField] Canvas menu;
-    [SerializeField] GameObject player;
     [SerializeField] Collider2D col2D;
     [SerializeField] Control control;
     [SerializeField] SpriteRenderer spriteRender;
@@ -29,5 +28,9 @@ public class LevelFinish : MonoBehaviour
         {
             menu.enabled = false;
         }
+    }
+    private void Update()
+    {
+
     }
 }
