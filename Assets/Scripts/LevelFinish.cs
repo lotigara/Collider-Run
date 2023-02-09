@@ -5,20 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class LevelFinish : MonoBehaviour
 {
-    [SerializeField] Canvas menu;
+    [SerializeField] GameObject menu;
     [SerializeField] Collider2D col2D;
     [SerializeField] Control control;
     [SerializeField] SpriteRenderer spriteRender;
     [SerializeField] CameraMove cameraMove;
     public void Start()
     {
-        menu.enabled = false;
+        menu.SetActive(false);
     }
     private void OnCollisionEnter2D(Collision2D col)
     {
         if (col.transform.CompareTag("Finish"))
         {
-            menu.enabled = true;
+            menu.SetActive(true);
             col2D.enabled = false;
             control.enabled = false;
             spriteRender.enabled = false;
@@ -26,7 +26,7 @@ public class LevelFinish : MonoBehaviour
         }
         else
         {
-            menu.enabled = false;
+            menu.SetActive(false);
         }
     }
     private void Update()
