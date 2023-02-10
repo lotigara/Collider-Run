@@ -26,5 +26,6 @@ public class Control : MonoBehaviour
         //var mouseMove = new Vector2(screenMousePosition.x, screenMousePosition.y);
         //move = Vector2.MoveTowards(move, mouseMove, speed * Time.deltaTime);
         //rb.velocity = move;
+        transform.LookAt (mouse);
     }
 }
