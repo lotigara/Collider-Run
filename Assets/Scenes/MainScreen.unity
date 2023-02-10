@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 285797741}
   - component: {fileID: 285797740}
   m_Layer: 5
-  m_Name: SettingsPanel
+  m_Name: LevelsPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
