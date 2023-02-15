@@ -740,7 +740,7 @@ Transform:
   m_GameObject: {fileID: 207462329}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5, y: 17, z: 0}
-  m_LocalScale: {x: 15, y: 15, z: 1}
+  m_LocalScale: {x: 5.7, y: 5.7, z: 1}
   m_Children: []
   m_Father: {fileID: 2060944735}
   m_RootOrder: 0
@@ -760,7 +760,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.0000038146973, y: 0}
   serializedVersion: 2
-  m_Radius: 0.495
+  m_Radius: 1.2450992
 --- !u!212 &207462332
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -826,7 +826,7 @@ Rigidbody2D:
   m_Mass: 0.0001
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -3577,7 +3577,7 @@ GameObject:
   - component: {fileID: 1148604839}
   - component: {fileID: 1148604840}
   m_Layer: 0
-  m_Name: EmptySymbol
+  m_Name: NatureSymbol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3636,8 +3636,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: c574efac04e22c341b9360973423b312, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.19607843}
+  m_Sprite: {fileID: 21300000, guid: e5776f4f07dc2184db1be3102d2b694b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4044,7 +4044,7 @@ GameObject:
   - component: {fileID: 1573104330}
   - component: {fileID: 1573104331}
   m_Layer: 0
-  m_Name: Spike
+  m_Name: SpikeSymbol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
