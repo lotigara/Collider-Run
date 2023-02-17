@@ -5,17 +5,47 @@ using UnityEngine;
 public class MenuOpen : MonoBehaviour
 {
     [SerializeField] GameObject menu;
+    [SerializeField] GameObject levelMenu;
+    [SerializeField] KeyCode keyOpen;
+    [SerializeField] KeyCode keyClose;
+    [SerializeField] Collider2D col2D;
+    [SerializeField] Control control;
+    [SerializeField] SpriteRenderer spriteRender;
+    [SerializeField] CameraMove cameraMove;
+    public bool isLevelFinished;
 
     private void Start()
     {
-        menu.SetActive(false);
+        levelMenu.SetActive(false);
     }
-    public void OpenMenu()
+    public void OpenMenu(GameObject openMenu)
     {
-        menu.SetActive(true);
+        openMenu.SetActive(true);
     }
-    public void CloseMenu()
+    public void CloseMenu(GameObject closeMenu)
     {
-        menu.SetActive(false);
+        closeMenu.SetActive(false);
+    }
+    public void Update()
+    {
+        if(isLevelFinished == false)
+        {
+            if (Input.GetKeyUp(keyOpen))
+            {
+                menu.SetActive(true);
+                col2D.enabled = false;
+                control.enabled = false;
+                spriteRender.enabled = false;
+                cameraMove.enabled = false;
+            }
+            if (Input.GetKeyUp(keyClose))
+            {
+                menu.SetActive(false);
+                col2D.enabled = true;
+                control.enabled = true;
+                spriteRender.enabled = true;
+                cameraMove.enabled = true;
+            }
+        }
     }
 }
