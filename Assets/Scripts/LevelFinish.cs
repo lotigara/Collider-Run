@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class LevelFinish : MonoBehaviour
 {
     [SerializeField] GameObject menu;
-    [SerializeField] GameObject levelMenu;
     [SerializeField] GameObject pauseMenu;
     [SerializeField] Collider2D col2D;
     [SerializeField] Control control;
@@ -17,13 +16,13 @@ public class LevelFinish : MonoBehaviour
     {
         menu.SetActive(false);
         pauseMenu.SetActive(false);
-        levelMenu.SetActive(false);
         //GameObject go = GameObject.Find("MenuOpener");
         //MenuOpen menuOpen = go.GetComponent<MenuOpen>();
         //bool isLevelFinish = menuOpen.isLevelFinished;
     }
     private void OnCollisionEnter2D(Collision2D col)
     {
+        PlayerPrefs.SetInt("level", PlayerPrefs.GetInt("level", 0) + 1);
         if (col.transform.CompareTag("Finish"))
         {
             menuOpen.isLevelFinished = true;
@@ -32,7 +31,6 @@ public class LevelFinish : MonoBehaviour
             control.enabled = false;
             spriteRender.enabled = false;
             cameraMove.enabled = false;
-            
         }
         else
         {
