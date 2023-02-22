@@ -7,14 +7,18 @@ using UnityEngine.SceneManagement;
 public class LevelsMechanic : MonoBehaviour
 {
     public int level;
-    public int convertedLevel;
     [SerializeField] Button[] levelButton;
 
     public void Start()
     {
-        convertedLevel = level - 1;
-        level = PlayerPrefs.GetInt("level", 0);
-        levelButton[level - 1].interactable = true;
+        level = PlayerPrefs.GetInt("level");
+        //level = 6;
+        Debug.Log(level);
+        for (int i=0; i < level; i++)
+        {
+            levelButton[i].interactable = true;
+        }
+       
     }
 
     public void ResetSaves()

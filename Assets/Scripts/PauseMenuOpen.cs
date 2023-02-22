@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MenuOpen : MonoBehaviour
+public class PauseMenuOpen : MonoBehaviour
 {
     [SerializeField] GameObject menu;
     [SerializeField] GameObject levelMenu;
@@ -17,6 +17,24 @@ public class MenuOpen : MonoBehaviour
     public void Start()
     {
         levelMenu.SetActive(false);
+        isMenuOpen = false;
+    }
+    public void GameOpenMenu(GameObject openMenu)
+    {
+        openMenu.SetActive(true);
+        col2D.enabled = false;
+        control.enabled = false;
+        spriteRender.enabled = false;
+        cameraMove.enabled = false;
+        isMenuOpen = true;
+    }
+    public void GameCloseMenu(GameObject closeMenu)
+    {
+        closeMenu.SetActive(false);
+        col2D.enabled = true;
+        control.enabled = true;
+        spriteRender.enabled = true;
+        cameraMove.enabled = true;
         isMenuOpen = false;
     }
     public void OpenMenu(GameObject openMenu)
