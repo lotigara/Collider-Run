@@ -731,7 +731,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.8518224, g: 1, b: 0.6745283, a: 1}
+  m_BackGroundColor: {r: 0.3160377, g: 1, b: 0.9747709, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -803,7 +803,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 0
-  convertedLevel: 0
   levelButton:
   - {fileID: 877369499}
   - {fileID: 358595295}
