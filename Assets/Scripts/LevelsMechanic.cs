@@ -23,6 +23,6 @@ public class LevelsMechanic : MonoBehaviour
 
     public void ResetSaves()
     {
-        PlayerPrefs.DeleteAll();
+        PlayerPrefs.DeleteKey("level");
     }
 }

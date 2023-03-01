@@ -706,6 +706,7 @@ GameObject:
   - component: {fileID: 537799347}
   - component: {fileID: 537799350}
   - component: {fileID: 537799351}
+  - component: {fileID: 537799352}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -810,6 +811,18 @@ MonoBehaviour:
   - {fileID: 2083004620}
   - {fileID: 1091706590}
   - {fileID: 2079607381}
+--- !u!114 &537799352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537799346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4b95a58227328b43bae9e9d0dc3e2ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &634285544
 GameObject:
   m_ObjectHideFlags: 0
@@ -1508,9 +1521,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 908637929}
-        m_MethodName: ChangeScene
-        m_Mode: 5
+      - m_Target: {fileID: 537799352}
+        m_MethodName: Rickroll
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2778,9 +2791,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 908637929}
-        m_MethodName: ChangeScene
-        m_Mode: 5
+      - m_Target: {fileID: 537799352}
+        m_MethodName: Rickroll
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2908,9 +2921,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 908637929}
-        m_MethodName: ChangeScene
-        m_Mode: 5
+      - m_Target: {fileID: 537799352}
+        m_MethodName: Rickroll
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

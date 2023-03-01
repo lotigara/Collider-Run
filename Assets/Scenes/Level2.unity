@@ -8082,6 +8082,7 @@ MonoBehaviour:
   spriteRender: {fileID: 1890095977}
   cameraMove: {fileID: 519420030}
   menuOpen: {fileID: 946710245}
+  nextLevel: 3
 --- !u!1 &1933341901
 GameObject:
   m_ObjectHideFlags: 0

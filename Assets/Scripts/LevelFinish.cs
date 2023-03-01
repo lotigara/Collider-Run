@@ -12,6 +12,7 @@ public class LevelFinish : MonoBehaviour
     [SerializeField] SpriteRenderer spriteRender;
     [SerializeField] CameraMove cameraMove;
     [SerializeField] PauseMenuOpen menuOpen;
+    public int nextLevel;
     public void Start()
     {
         menu.SetActive(false);
@@ -22,9 +23,9 @@ public class LevelFinish : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D col)
     {
-        PlayerPrefs.SetInt("level", PlayerPrefs.GetInt("level") + 1);
         if (col.transform.CompareTag("Finish"))
         {
+            PlayerPrefs.SetInt("level", nextLevel);
             menuOpen.isLevelFinished = true;
             menu.SetActive(true);
             col2D.enabled = false;
