@@ -5904,7 +5904,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 1479074082}
   m_OnClick:
     m_PersistentCalls:
@@ -7346,7 +7346,7 @@ MonoBehaviour:
   spriteRender: {fileID: 1890095977}
   cameraMove: {fileID: 519420030}
   menuOpen: {fileID: 946710245}
-  nextLevel: 0
+  nextLevel: 4
 --- !u!1 &1933341901
 GameObject:
   m_ObjectHideFlags: 0
