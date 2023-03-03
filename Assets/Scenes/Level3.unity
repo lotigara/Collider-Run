@@ -1634,7 +1634,7 @@ GameObject:
   - component: {fileID: 377027662}
   m_Layer: 0
   m_Name: Wall (1)
-  m_TagString: BouncePad
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3104,7 +3104,7 @@ GameObject:
   - component: {fileID: 701869272}
   m_Layer: 0
   m_Name: Wall
-  m_TagString: BouncePad
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7346,7 +7346,7 @@ MonoBehaviour:
   spriteRender: {fileID: 1890095977}
   cameraMove: {fileID: 519420030}
   menuOpen: {fileID: 946710245}
-  nextLevel: 4
+  nextLevel: 3
 --- !u!1 &1933341901
 GameObject:
   m_ObjectHideFlags: 0

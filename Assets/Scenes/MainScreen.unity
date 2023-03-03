@@ -883,7 +883,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 0
   levelButton:
-  - {fileID: 877369499}
   - {fileID: 358595295}
   - {fileID: 1785342490}
   - {fileID: 2083004620}
@@ -1342,7 +1341,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 877369500}
   m_OnClick:
     m_PersistentCalls:
