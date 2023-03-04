@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerDead : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class PlayerDead : MonoBehaviour
     {
         if (col.transform.CompareTag("Respawn"))
         {
-            transform.position = spawnPoint.position;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }
