@@ -68,7 +68,6 @@
     <Compile Include="Assets\Scripts\PauseMenuOpen.cs" />
     <Compile Include="Assets\Scripts\PlayerDead.cs" />
     <Compile Include="Assets\Scripts\PlayerHarassment.cs" />
-    <Compile Include="Assets\Scripts\Presses.cs" />
     <Compile Include="Assets\Scripts\SceneChanger.cs" />
     <Compile Include="Assets\Scripts\Something.cs" />
   </ItemGroup>

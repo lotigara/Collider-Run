@@ -7877,6 +7877,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1147355220}
     m_Modifications:
+    - target: {fileID: 2553851490536389860, guid: 3ea75d3bfbe99b44d98a0b8dfd72460c,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2553851490536389864, guid: 3ea75d3bfbe99b44d98a0b8dfd72460c,
         type: 3}
       propertyPath: m_Name
@@ -7885,7 +7890,7 @@ PrefabInstance:
     - target: {fileID: 2553851490536389865, guid: 3ea75d3bfbe99b44d98a0b8dfd72460c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2553851490536389865, guid: 3ea75d3bfbe99b44d98a0b8dfd72460c,
         type: 3}
