@@ -1,55 +1,21 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31410.357
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEngine.UI", "UnityEngine.UI.csproj", "{EC4D3A69-854E-1783-91F8-32BC484323C3}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{dc168db9-d612-9e4e-11ce-f4a971f8d700}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{B98D16DC-12D6-4E9E-11CE-F4A971F8D700}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{974C2509-F176-F538-2901-423F84E58670}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.Sprite.Editor", "Unity.2D.Sprite.Editor.csproj", "{BE097017-CEFC-2BB2-FBF8-0BCD3C3E5A48}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEditor.UI", "UnityEditor.UI.csproj", "{430BC24E-4EFF-1C79-1CBB-1F35B5B93874}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.Tilemap.Editor", "Unity.2D.Tilemap.Editor.csproj", "{FB423D0F-BC48-8290-72BF-3E6537A2317C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{974c2509-f176-f538-2901-423f84e58670}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EC4D3A69-854E-1783-91F8-32BC484323C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EC4D3A69-854E-1783-91F8-32BC484323C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EC4D3A69-854E-1783-91F8-32BC484323C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EC4D3A69-854E-1783-91F8-32BC484323C3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B98D16DC-12D6-4E9E-11CE-F4A971F8D700}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B98D16DC-12D6-4E9E-11CE-F4A971F8D700}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B98D16DC-12D6-4E9E-11CE-F4A971F8D700}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B98D16DC-12D6-4E9E-11CE-F4A971F8D700}.Release|Any CPU.Build.0 = Release|Any CPU
-		{974C2509-F176-F538-2901-423F84E58670}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{974C2509-F176-F538-2901-423F84E58670}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{974C2509-F176-F538-2901-423F84E58670}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{974C2509-F176-F538-2901-423F84E58670}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BE097017-CEFC-2BB2-FBF8-0BCD3C3E5A48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BE097017-CEFC-2BB2-FBF8-0BCD3C3E5A48}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BE097017-CEFC-2BB2-FBF8-0BCD3C3E5A48}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BE097017-CEFC-2BB2-FBF8-0BCD3C3E5A48}.Release|Any CPU.Build.0 = Release|Any CPU
-		{430BC24E-4EFF-1C79-1CBB-1F35B5B93874}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{430BC24E-4EFF-1C79-1CBB-1F35B5B93874}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{430BC24E-4EFF-1C79-1CBB-1F35B5B93874}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{430BC24E-4EFF-1C79-1CBB-1F35B5B93874}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FB423D0F-BC48-8290-72BF-3E6537A2317C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FB423D0F-BC48-8290-72BF-3E6537A2317C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FB423D0F-BC48-8290-72BF-3E6537A2317C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FB423D0F-BC48-8290-72BF-3E6537A2317C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{dc168db9-d612-9e4e-11ce-f4a971f8d700}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{dc168db9-d612-9e4e-11ce-f4a971f8d700}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{974c2509-f176-f538-2901-423f84e58670}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{974c2509-f176-f538-2901-423f84e58670}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {FDA552BC-C1FB-48C3-9F34-923FCDDAD414}
 	EndGlobalSection
 EndGlobal

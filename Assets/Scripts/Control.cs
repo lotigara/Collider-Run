@@ -16,7 +16,7 @@ public class Control : MonoBehaviour
     void FixedUpdate()
     {
         Vector3 screenMousePosition = Input.mousePosition;
-        Debug.Log(Input.mousePosition);
+        //Debug.Log(Input.mousePosition);
         //transform.LookAt(transform, screenMousePosition);
         //transform.position = Vector2.MoveTowards(transform.position, screenMousePosition, speed * Time.deltaTime);
         Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;

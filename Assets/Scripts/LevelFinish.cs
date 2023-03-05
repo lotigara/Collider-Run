@@ -13,8 +13,11 @@ public class LevelFinish : MonoBehaviour
     [SerializeField] CameraMove cameraMove;
     [SerializeField] PauseMenuOpen menuOpen;
     public int nextLevel;
+    int level;
     public void Start()
     {
+        Debug.Log(level);
+        level = PlayerPrefs.GetInt("level");
         menu.SetActive(false);
         pauseMenu.SetActive(false);
         //GameObject go = GameObject.Find("MenuOpener");
@@ -25,7 +28,14 @@ public class LevelFinish : MonoBehaviour
     {
         if (col.transform.CompareTag("Finish"))
         {
-            PlayerPrefs.SetInt("level", nextLevel);
+            if (level > nextLevel)
+            {
+                PlayerPrefs.SetInt("level", level);
+            }
+            else if (level <= nextLevel)
+            {
+                PlayerPrefs.SetInt("level", nextLevel);
+            }
             menuOpen.isLevelFinished = true;
             menu.SetActive(true);
             col2D.enabled = false;
