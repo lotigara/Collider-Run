@@ -2060,7 +2060,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -2221,7 +2221,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.1254902, g: 0.1254902, b: 0.1254902, a: 0}
+  m_BackGroundColor: {r: 0.34509805, g: 0.34901962, b: 0.34509805, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2282,11 +2282,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 0
   levelButton:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1784540600}
+  - {fileID: 1718503839}
+  - {fileID: 1632225043}
+  - {fileID: 1077090401}
+  - {fileID: 1445821918}
 --- !u!1 &534787566
 GameObject:
   m_ObjectHideFlags: 0
