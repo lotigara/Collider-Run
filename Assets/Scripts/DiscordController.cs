@@ -5,48 +5,45 @@ using Discord;
 
 public class DiscordController : MonoBehaviour
 {
-    
-    public Discord.Discord _discord;
+    public Discord.Discord discord;
     public string state;
-    public string imageKey;
+    public string details;
     public string imageText;
-    public bool instance;
-
     public void Start()
     {
-        _discord =  new Discord.Discord(clientId: 1075494312055410729, (int)Discord.CreateFlags.Default);
-
+        discord = new Discord.Discord(1075494312055410729, (System.UInt64)Discord.CreateFlags.Default);
+        var activityManager = discord.GetActivityManager();
         var activity = new Discord.Activity
         {
-        State = state,
-        Assets =
-        {
-            LargeImage = imageKey,
-            LargeText = imageText,
-        },
-        Instance = instance,
-        };
-
-        _discord.GetActivityManager().UpdateActivity(activity, (result) =>
-        {
-            if (result == Discord.Result.Ok)
+            State = state,
+            Details = details,
+            Assets =
             {
-                Debug.Log("Success!");
+                LargeImage = "discord",
+                LargeText = imageText,
+            }
+        };
+        activityManager.UpdateActivity
+        (activity, (res) =>
+        {
+            if (res == Discord.Result.Ok)
+            {
+                Debug.Log("Discord Activity is set!");
             }
             else
             {
-                Debug.Log("Failed");
+                Debug.LogError("Discord Activity is failed :(");
             }
         });
-    }
-    
-    public void Update()
-    {
-        _discord.RunCallbacks();
+        //discord.RunCallbacks();
     }
 
+    public void Update()
+    {
+        discord.RunCallbacks();
+    }
     public void OnApplicationQuit()
     {
-        _discord.Dispose();
+        discord.Dispose();
     }
 } 

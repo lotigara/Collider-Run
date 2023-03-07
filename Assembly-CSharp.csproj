@@ -40,6 +40,8 @@
      <Compile Include="Assets\Scripts\CameraMove.cs" />
      <Compile Include="Assets\Scripts\Control.cs" />
      <Compile Include="Assets\Scripts\DiscordController.cs" />
+     <Compile Include="Assets\Scripts\DiscordRpc.cs" />
+     <Compile Include="Assets\Scripts\DiscordTime.cs" />
      <Compile Include="Assets\Scripts\EnemyDead.cs" />
      <Compile Include="Assets\Scripts\FollowPath.cs" />
      <Compile Include="Assets\Scripts\LevelFinish.cs" />
@@ -48,6 +50,7 @@
      <Compile Include="Assets\Scripts\PauseMenuOpen.cs" />
      <Compile Include="Assets\Scripts\PlayerDead.cs" />
      <Compile Include="Assets\Scripts\PlayerHarassment.cs" />
+     <Compile Include="Assets\Scripts\PresenceManager.cs" />
      <Compile Include="Assets\Scripts\SceneChanger.cs" />
      <Compile Include="Assets\Scripts\Something.cs" />
     <Reference Include="UnityEngine">
