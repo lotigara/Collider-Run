@@ -3680,7 +3680,7 @@ GameObject:
   - component: {fileID: 822910027}
   - component: {fileID: 822910028}
   m_Layer: 0
-  m_Name: gun
+  m_Name: DecorativeGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7981,7 +7981,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gun: {fileID: 1764857624}
-  decorativeGun: {fileID: 0}
+  decorativeGun: {fileID: 822910024}
 --- !u!1 &1937455812
 GameObject:
   m_ObjectHideFlags: 0
