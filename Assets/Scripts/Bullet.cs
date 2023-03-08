@@ -18,7 +18,7 @@ public class Bullet : MonoBehaviour
             {
                 hitInfo.collider.gameObject.SetActive(false);
             }
-            Destroy(gameObject);
+            Destroy(this.gameObject);
         }
         transform.Translate(Vector2.right * speed * Time.deltaTime);
     }
