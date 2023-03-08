@@ -5,30 +5,36 @@ using UnityEngine;
 
 public class Control : MonoBehaviour
 {
-    public float speed;
+    public Joystick joystick;
+    public ControlType controlType;
+    public float speed = 1f;
+    public float mobileSpeed;
     private Vector3 mouse;
     public Rigidbody2D rb;
+    private Vector3 pos;
+    public enum ControlType {PC, Android}
     void Start()
     {
         mouse = Input.mousePosition;
+        if (controlType == ControlType.PC)
+        {
+            joystick.gameObject.SetActive(false);
+        }
     }
 
     void FixedUpdate()
     {
-        Vector3 screenMousePosition = Input.mousePosition;
-        //Debug.Log(Input.mousePosition);
-        //transform.LookAt(transform, screenMousePosition);
-        //transform.position = Vector2.MoveTowards(transform.position, screenMousePosition, speed * Time.deltaTime);
-        Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-        transform.eulerAngles = new Vector3(0, 0, Mathf.Rad2Deg * Mathf.Atan2(pos.y, pos.x));
-        //var dir = (screenMousePosition - transform.position).normalized;
-        rb.velocity = pos * speed;
-        //rb.SetRotation(screenMousePosition.x- screenMousePosition.x);
-        //rb.rotation(new Vector3(0, 0, 0));
-        //transform.LookAt(new Vector3(0,0,dir.x));
-        //var move = new Vector2(rb.position.x, rb.position.y);
-        //var mouseMove = new Vector2(screenMousePosition.x, screenMousePosition.y);
-        //move = Vector2.MoveTowards(move, mouseMove, speed * Time.deltaTime);
-        //rb.velocity = move;
+        if (controlType == ControlType.PC)
+        {
+            Vector3 screenMousePosition = Input.mousePosition;
+            pos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+            transform.eulerAngles = new Vector3(0, 0, Mathf.Rad2Deg * Mathf.Atan2(pos.y, pos.x));
+            rb.velocity = pos * speed;
+        }
+        else if (controlType == ControlType.Android)
+        {
+            pos = new Vector3(joystick.Horizontal, joystick.Vertical);
+            rb.velocity = pos * mobileSpeed;
+        }
     }
 }
