@@ -52,6 +52,7 @@
      <Compile Include="Assets\Scripts\DiscordTime.cs" />
      <Compile Include="Assets\Scripts\EnemyDead.cs" />
      <Compile Include="Assets\Scripts\FollowPath.cs" />
+     <Compile Include="Assets\Scripts\GetGun.cs" />
      <Compile Include="Assets\Scripts\Gun.cs" />
      <Compile Include="Assets\Scripts\LevelFinish.cs" />
      <Compile Include="Assets\Scripts\LevelsMechanic.cs" />

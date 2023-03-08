@@ -6,6 +6,7 @@ TagManager:
   tags:
   - BouncePad
   - Enemy
+  - Destroyable
   layers:
   - Default
   - TransparentFX

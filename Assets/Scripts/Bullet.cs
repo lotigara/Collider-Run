@@ -18,6 +18,10 @@ public class Bullet : MonoBehaviour
             {
                 Destroy(hitInfo.collider.gameObject);
             }
+            if(hitInfo.collider.CompareTag("Destroyable"))
+            {
+                Destroy(hitInfo.collider.gameObject);
+            }
             Destroy(this.gameObject);
         }
         transform.Translate(Vector2.right * speed * Time.deltaTime);
