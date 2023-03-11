@@ -9,26 +9,33 @@ public class Gun : MonoBehaviour
     private float timeBtwShots;
     public float startTimeBtwShots;
     private CameraShake cameraShake;
+    private Control player;
 
     public void Start()
     {
         cameraShake = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraShake>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Control>();
     }
 
     void Update()
     {
         if (timeBtwShots <= 0)
         {
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButton(0) && player.controlType == Control.ControlType.PC)
             {
-                Instantiate(bullet, shotPoint.position, transform.rotation);
-                timeBtwShots = startTimeBtwShots;
-                cameraShake.Shake();
+                Shoot();
             }
         }
         else
         {
             timeBtwShots -= Time.deltaTime;
         }
+    }
+
+    public void Shoot()
+    {
+        Instantiate(bullet, shotPoint.position, transform.rotation);
+        timeBtwShots = startTimeBtwShots;
+        cameraShake.Shake();
     }
 }

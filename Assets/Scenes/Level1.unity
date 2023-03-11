@@ -349,7 +349,7 @@ PrefabInstance:
     - target: {fileID: 2929252283123773939, guid: aaa2c939c0359ac4dbce3f49e8b90252,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
@@ -7756,8 +7756,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   joystick: {fileID: 16647059}
   controlType: 0
+  offset: 0
   speed: 1
-  mobileSpeed: 10
+  mobileSpeed: 60
   rb: {fileID: 1890095980}
 --- !u!212 &1890095977
 SpriteRenderer:
