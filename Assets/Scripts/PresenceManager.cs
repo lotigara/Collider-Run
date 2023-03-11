@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 namespace DiscordPresence
 {
@@ -113,7 +114,7 @@ namespace DiscordPresence
             {
                 Destroy(gameObject);
             }
-            //DontDestroyOnLoad(gameObject);
+            SceneManager.activeSceneChanged += Initialization;
         }
 
         void Update()
@@ -200,6 +201,19 @@ namespace DiscordPresence
         public void OnApplicationQuit()
         {
             DiscordRpc.ClearPresence();
+        }
+
+        public void Start()
+        {
+            // Заглушка для вызова колбека при инициализации текущего объекта
+            var currentScene = SceneManager.GetActiveScene();
+            Initialization(currentScene, currentScene);
+        }
+
+        public void Initialization(Scene current, Scene next)
+        {
+            DiscordRpc.UpdatePresence(presence);
+            Debug.Log($"Last scene [{current.name}] was replaced by [{next.name}]");
         }
     }
 }
