@@ -46,6 +46,7 @@
      <Compile Include="Assets\Scripts\AnimGif.cs" />
      <Compile Include="Assets\Scripts\Bullet.cs" />
      <Compile Include="Assets\Scripts\CameraMove.cs" />
+     <Compile Include="Assets\Scripts\CameraShake.cs" />
      <Compile Include="Assets\Scripts\Control.cs" />
      <Compile Include="Assets\Scripts\DiscordController.cs" />
      <Compile Include="Assets\Scripts\DiscordRpc.cs" />
@@ -60,6 +61,13 @@
      <Compile Include="Assets\Scripts\PauseMenuOpen.cs" />
      <Compile Include="Assets\Scripts\PlayerDead.cs" />
      <Compile Include="Assets\Scripts\PlayerHarassment.cs" />
+     <Compile Include="Assets\Scripts\Plugins\DiscordGameSDK\csharp\ActivityManager.cs" />
+     <Compile Include="Assets\Scripts\Plugins\DiscordGameSDK\csharp\Constants.cs" />
+     <Compile Include="Assets\Scripts\Plugins\DiscordGameSDK\csharp\Core.cs" />
+     <Compile Include="Assets\Scripts\Plugins\DiscordGameSDK\csharp\ImageManager.cs" />
+     <Compile Include="Assets\Scripts\Plugins\DiscordGameSDK\csharp\LobbyManager.cs" />
+     <Compile Include="Assets\Scripts\Plugins\DiscordGameSDK\csharp\StorageManager.cs" />
+     <Compile Include="Assets\Scripts\Plugins\DiscordGameSDK\csharp\StoreManager.cs" />
      <Compile Include="Assets\Scripts\PresenceManager.cs" />
      <Compile Include="Assets\Scripts\SceneChanger.cs" />
      <Compile Include="Assets\Scripts\Something.cs" />
@@ -614,10 +622,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{974c2509-f176-f538-2901-423f84e58670}</Project>
-      <Name>Assembly-CSharp-firstpass</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

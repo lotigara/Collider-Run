@@ -6,21 +6,20 @@ using Discord;
 public class DiscordController : MonoBehaviour
 {
     public Discord.Discord discord;
-    public string state;
-    public string details;
-    public string imageText;
     public void Start()
     {
         discord = new Discord.Discord(1075494312055410729, (System.UInt64)Discord.CreateFlags.Default);
         var activityManager = discord.GetActivityManager();
         var activity = new Discord.Activity
         {
-            State = state,
-            Details = details,
             Assets =
             {
                 LargeImage = "discord",
-                LargeText = imageText,
+                LargeText = "The Main Hero and Logo of The Game",
+            },
+            Timestamps = 
+            {
+                Start = 5,
             }
         };
         activityManager.UpdateActivity

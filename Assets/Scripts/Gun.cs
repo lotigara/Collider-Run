@@ -8,12 +8,13 @@ public class Gun : MonoBehaviour
     public Transform shotPoint;
     private float timeBtwShots;
     public float startTimeBtwShots;
-    void Start()
+    private CameraShake cameraShake;
+
+    public void Start()
     {
-        
+        cameraShake = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraShake>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (timeBtwShots <= 0)
@@ -22,6 +23,7 @@ public class Gun : MonoBehaviour
             {
                 Instantiate(bullet, shotPoint.position, transform.rotation);
                 timeBtwShots = startTimeBtwShots;
+                cameraShake.Shake();
             }
         }
         else

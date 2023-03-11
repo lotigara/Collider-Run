@@ -19,6 +19,10 @@ public class PlayerHarassment : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         direction.Normalize();
         movement = direction;
+        //Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        //transform.eulerAngles = new Vector3(0, 0, Mathf.Rad2Deg * Mathf.Atan2(pos.y, pos.x));
+        //rb.velocity = pos * speed;
+        transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, Mathf.Atan2(player.position.y - transform.position.y, player.position.x - transform.position.x) * Mathf.Rad2Deg);
     }
     private void FixedUpdate()
     {

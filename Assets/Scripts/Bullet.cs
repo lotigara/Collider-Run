@@ -8,6 +8,12 @@ public class Bullet : MonoBehaviour
     public float lifetime;
     public float distance;
     public LayerMask whatIsSolid;
+    public GameObject destroyParticle;
+
+    public void Start()
+    {
+        Invoke("DestroyBullet", lifetime);
+    }
 
     public void Update()
     {
@@ -22,8 +28,14 @@ public class Bullet : MonoBehaviour
             {
                 Destroy(hitInfo.collider.gameObject);
             }
-            Destroy(this.gameObject);
+            DestroyBullet();
         }
         transform.Translate(Vector2.right * speed * Time.deltaTime);
+    }
+
+    public void DestroyBullet()
+    {
+        Instantiate(destroyParticle, transform.position, Quaternion.identity);
+        Destroy(this.gameObject);
     }
 }

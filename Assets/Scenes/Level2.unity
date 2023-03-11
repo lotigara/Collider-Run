@@ -2657,14 +2657,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 34f7460692ffafb4882cc6625e12b830, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: On the second level
-  details: It is a hard level!
-  imageText: The Main Hero and Logo of The Game
 --- !u!1 &541155081
 GameObject:
   m_ObjectHideFlags: 0
@@ -8302,7 +8299,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5142c4275ff3d244ea83722e6f815253, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  joystick: {fileID: 0}
+  controlType: 0
   speed: 1
+  mobileSpeed: 0
   rb: {fileID: 1890095980}
 --- !u!212 &1890095977
 SpriteRenderer:
@@ -8418,6 +8418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 2055569915}
+  deathParticle: {fileID: 0}
 --- !u!114 &1890095982
 MonoBehaviour:
   m_ObjectHideFlags: 0
