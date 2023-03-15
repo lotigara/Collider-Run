@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 public class CameraMove : MonoBehaviour
 {
-    public GameObject player; // тут объект игрока
+    private GameObject player;
     private Vector3 offset;
 
     void Start()
     {
+        player = GameObject.Find("Player");
         offset = transform.position - player.transform.position;
     }
 

@@ -27,7 +27,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 321.1765, y: 232.94547, z: 1.5805931}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -44,3 +43,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95a36ef07d6e36b40ae2955f9cdbe930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menu: {fileID: 0}
+  levelMenu: {fileID: 0}
+  key: 27
+  col2D: {fileID: 6100213516115110958, guid: 67cc14a230808b74d9105ede8152016a, type: 3}
+  control: {fileID: 6100213516115110957, guid: 67cc14a230808b74d9105ede8152016a, type: 3}
+  spriteRender: {fileID: 6100213516115110956, guid: 67cc14a230808b74d9105ede8152016a,
+    type: 3}
+  cameraMove: {fileID: 4272045307749545711, guid: 958a64062aa21d045afb3bece57e3ff2,
+    type: 3}
+  isLevelFinished: 0
+  isMenuOpen: 0

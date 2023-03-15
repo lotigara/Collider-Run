@@ -5,7 +5,7 @@ using UnityEngine;
 public class GetGun : MonoBehaviour
 {
     public GameObject gun;
-    public GameObject shootButton;
+    public static GameObject shootButton;
     public GameObject decorativeGun;
     private Control player;
     
@@ -22,5 +22,13 @@ public class GetGun : MonoBehaviour
     public void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Control>();
+    }
+
+    public void Update()
+    {
+        if (player.controlType == Control.ControlType.PC)
+        {
+            shootButton.SetActive(false);
+        }
     }
 }

@@ -33,12 +33,12 @@ public class Control : MonoBehaviour
         /*if (SystemInfo.deviceType == DeviceType.Handheld)
         {
             controlType = ControlType.Android;
-            PlayerPrefs.SetInt("platform", ((int)controlType));
+            PlayerPrefs.SetInt("platform", ((int)controlType);
         }
         else
         {
             controlType = ControlType.Android;
-            PlayerPrefs.SetInt("platform", ((int)controlType));
+            PlayerPrefs.SetInt("platform", ((int)controlType);
         }
         Debug.Log(((int)controlType));
         */

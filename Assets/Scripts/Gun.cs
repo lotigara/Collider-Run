@@ -19,6 +19,11 @@ public class Gun : MonoBehaviour
 
     void Update()
     {
+        //if (player.controlType == Control.ControlType.PC)
+        //{
+            //GetGun.shootButton.SetActive(false);
+        //}
+            
         if (timeBtwShots <= 0)
         {
             if (Input.GetMouseButton(0) && player.controlType == Control.ControlType.PC)

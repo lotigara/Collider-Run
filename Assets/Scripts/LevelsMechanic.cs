@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class LevelsMechanic : MonoBehaviour
 {
     public int level;
-    [SerializeField] Button[] levelButton;
+    public Button[] levelButton;
 
     public void Start()
     {
