@@ -5669,6 +5669,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6533346930174091859, guid: 958a64062aa21d045afb3bece57e3ff2,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7be174334a2b50344a1f022d2eba47ff, type: 3}
     - target: {fileID: 4272045307749545488, guid: 958a64062aa21d045afb3bece57e3ff2,
         type: 3}
       propertyPath: levelButton.Array.size

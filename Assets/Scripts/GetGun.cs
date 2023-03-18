@@ -5,7 +5,7 @@ using UnityEngine;
 public class GetGun : MonoBehaviour
 {
     public GameObject gun;
-    public static GameObject shootButton;
+    [SerializeField] public GameObject shootButton;
     public GameObject decorativeGun;
     private Control player;
     
@@ -15,20 +15,20 @@ public class GetGun : MonoBehaviour
         {
             Destroy(decorativeGun);
             gun.SetActive(true);
-            shootButton.SetActive(true);
+            if (player.controlType == Control.ControlType.PC)
+            {
+                shootButton.SetActive(false);
+            }
+            else if (player.controlType == Control.ControlType.Android)
+            {
+                shootButton.SetActive(true);
+            }
         }
     }
 
     public void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Control>();
-    }
-
-    public void Update()
-    {
-        if (player.controlType == Control.ControlType.PC)
-        {
-            shootButton.SetActive(false);
-        }
+        shootButton.SetActive(false);
     }
 }

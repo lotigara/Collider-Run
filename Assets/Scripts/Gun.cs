@@ -8,6 +8,7 @@ public class Gun : MonoBehaviour
     public Transform shotPoint;
     private float timeBtwShots;
     public float startTimeBtwShots;
+    public GameObject shootButton;
     private CameraShake cameraShake;
     private Control player;
 
@@ -15,6 +16,10 @@ public class Gun : MonoBehaviour
     {
         cameraShake = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraShake>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Control>();
+        if (player.controlType == Control.ControlType.PC)
+        {
+            shootButton.SetActive(false);
+        }
     }
 
     void Update()
