@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 350, y: -190}
+  m_AnchoredPosition: {x: 350, y: -168}
   m_SizeDelta: {x: 150, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &20869906
@@ -2310,7 +2310,7 @@ MonoBehaviour:
           m_StringArgument: Level1
           m_BoolArgument: 0
         m_CallState: 1
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2024014208}
         m_MethodName: ResetSaves
         m_Mode: 1
         m_Arguments:
@@ -2664,7 +2664,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 350, y: -190}
+  m_AnchoredPosition: {x: 350, y: -168}
   m_SizeDelta: {x: 150, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1679562933
@@ -3612,11 +3612,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -1321291537612607549, guid: 958a64062aa21d045afb3bece57e3ff2,
-        type: 3}
-      propertyPath: platform
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 4272045307749545488, guid: 958a64062aa21d045afb3bece57e3ff2,
         type: 3}
       propertyPath: levelButton.Array.size
@@ -3730,6 +3725,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4b95a58227328b43bae9e9d0dc3e2ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2024014208 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4272045307749545488, guid: 958a64062aa21d045afb3bece57e3ff2,
+    type: 3}
+  m_PrefabInstance: {fileID: 2024014202}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024014203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d649d5c3bc8b56a41997023b6e92e595, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2079607379

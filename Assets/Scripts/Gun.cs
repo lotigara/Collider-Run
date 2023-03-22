@@ -11,6 +11,9 @@ public class Gun : MonoBehaviour
     public GameObject shootButton;
     private CameraShake cameraShake;
     private Control player;
+    private float nextActionTime = 0f;
+    public float period = 1f;
+    [SerializeField] bool isSpawner;
 
     public void Start()
     {
@@ -24,21 +27,24 @@ public class Gun : MonoBehaviour
 
     void Update()
     {
-        //if (player.controlType == Control.ControlType.PC)
-        //{
-            //GetGun.shootButton.SetActive(false);
-        //}
-            
-        if (timeBtwShots <= 0)
+        if (isSpawner == false)
         {
-            if (Input.GetMouseButton(0) && player.controlType == Control.ControlType.PC)
+            if (timeBtwShots <= 0)
             {
-                Shoot();
+                if (Input.GetMouseButton(0) && player.controlType == Control.ControlType.PC)
+                {
+                    Shoot();
+                }
+            }
+            else
+            {
+                timeBtwShots -= Time.deltaTime;
             }
         }
-        else
+        else if (Time.time > nextActionTime)
         {
-            timeBtwShots -= Time.deltaTime;
+            nextActionTime += period;
+            Shoot();
         }
     }
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerHarassment : MonoBehaviour
 {
-    public Transform player;
+    private Transform player;
     private Rigidbody2D rb;
     private Vector2 movement;
     public int speed = 5;
@@ -12,6 +12,7 @@ public class PlayerHarassment : MonoBehaviour
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
     void Update()
     {

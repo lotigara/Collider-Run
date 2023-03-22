@@ -9,6 +9,7 @@ public class LevelFinish : MonoBehaviour
     [SerializeField] GameObject pauseMenu;
     [SerializeField] Collider2D col2D;
     [SerializeField] Control control;
+    [SerializeField] GameObject player;
     [SerializeField] SpriteRenderer spriteRender;
     [SerializeField] CameraMove cameraMove;
     [SerializeField] PauseMenuOpen menuOpen;

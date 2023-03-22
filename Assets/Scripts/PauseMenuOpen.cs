@@ -11,15 +11,13 @@ public class PauseMenuOpen : MonoBehaviour
     [HideInInspector] public Control control;
     [HideInInspector] public SpriteRenderer spriteRender;
     [HideInInspector] public CameraMove cameraMove;
+    [HideInInspector] public GameObject player;
     [HideInInspector] public bool isLevelFinished;
     bool isMenuOpen;
 
     public void Start()
     {
-        control = GameObject.Find("Player").GetComponent<Control>();
-        col2D = GameObject.Find("Player").GetComponent<Collider2D>();
-        spriteRender = GameObject.Find("Player").GetComponent<SpriteRenderer>();
-        //menu = GameObject.Find("PausePanel");
+        player = GameObject.FindGameObjectWithTag("Player");
         levelMenu = GameObject.Find("LevelsPanel");
         levelMenu.SetActive(false);
         isMenuOpen = false;
@@ -27,20 +25,12 @@ public class PauseMenuOpen : MonoBehaviour
     public void GameOpenMenu(GameObject openMenu)
     {
         openMenu.SetActive(true);
-        col2D.enabled = false;
-        control.enabled = false;
-        spriteRender.enabled = false;
-        cameraMove.enabled = false;
-        isMenuOpen = true;
+        player.SetActive(false);
     }
     public void GameCloseMenu(GameObject closeMenu)
     {
         closeMenu.SetActive(false);
-        col2D.enabled = true;
-        control.enabled = true;
-        spriteRender.enabled = true;
-        cameraMove.enabled = true;
-        isMenuOpen = false;
+        player.SetActive(true);
     }
     public void OpenMenu(GameObject openMenu)
     {

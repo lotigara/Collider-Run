@@ -2456,7 +2456,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 290845205}
   m_OnClick:
     m_PersistentCalls:
@@ -5024,7 +5024,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: To be continued!
+  m_Text: Next Level
 --- !u!222 &554114951
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14687,11 +14687,6 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 533616742}
-    - target: {fileID: 6100213516115110957, guid: 67cc14a230808b74d9105ede8152016a,
-        type: 3}
-      propertyPath: controlType
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6100213516115110959, guid: 67cc14a230808b74d9105ede8152016a,
         type: 3}
       propertyPath: m_RootOrder
