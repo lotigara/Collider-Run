@@ -100,6 +100,8 @@ MonoBehaviour:
   shotPoint: {fileID: 6100213514952247696}
   startTimeBtwShots: 0.25
   shootButton: {fileID: 0}
+  period: 1
+  isSpawner: 0
 --- !u!61 &3811247197779135805
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -257,10 +259,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   joystick: {fileID: 2929252283123773951, guid: aaa2c939c0359ac4dbce3f49e8b90252,
     type: 3}
-  controlType: 0
+  controlType: 1
   offset: 0
   speed: 1
-  mobileSpeed: 300
+  mobileSpeed: 250
   rb: {fileID: 6100213516115110953}
 --- !u!50 &6100213516115110953
 Rigidbody2D:
@@ -330,6 +332,7 @@ MonoBehaviour:
   pauseMenu: {fileID: 0}
   col2D: {fileID: 6100213516115110958}
   control: {fileID: 6100213516115110957}
+  player: {fileID: 0}
   spriteRender: {fileID: 6100213516115110956}
   cameraMove: {fileID: 4272045307749545711, guid: 958a64062aa21d045afb3bece57e3ff2,
     type: 3}
