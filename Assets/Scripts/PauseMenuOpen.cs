@@ -17,9 +17,8 @@ public class PauseMenuOpen : MonoBehaviour
 
     public void Start()
     {
+        GameCloseMenu(menu);
         player = GameObject.FindGameObjectWithTag("Player");
-        levelMenu = GameObject.Find("LevelsPanel");
-        levelMenu.SetActive(false);
         isMenuOpen = false;
     }
     public void GameOpenMenu(GameObject openMenu)

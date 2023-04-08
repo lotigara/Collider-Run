@@ -257,7 +257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5142c4275ff3d244ea83722e6f815253, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joystick: {fileID: 2929252283123773951, guid: aaa2c939c0359ac4dbce3f49e8b90252,
+  joystick: {fileID: -5016682516741521487, guid: aaa2c939c0359ac4dbce3f49e8b90252,
     type: 3}
   controlType: 1
   offset: 0
