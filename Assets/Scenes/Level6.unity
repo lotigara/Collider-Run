@@ -1202,7 +1202,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 290845205}
   m_OnClick:
     m_PersistentCalls:
@@ -2506,7 +2506,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: To be continued!
+  m_Text: Next Level
 --- !u!222 &554114951
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3472,9 +3472,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 379531896646241894, guid: ee34101841131d34595be8db28e4d7ed, type: 3}
   shotPoint: {fileID: 1539769708}
-  startTimeBtwShots: 0
+  startTimeBtwShots: 1
   shootButton: {fileID: 0}
-  period: 0.5
   isSpawner: 1
 --- !u!1 &832557292
 GameObject:
@@ -6124,7 +6123,7 @@ GameObject:
   - component: {fileID: 1573104330}
   - component: {fileID: 1573104331}
   m_Layer: 0
-  m_Name: NatureSymbol
+  m_Name: PressSymbol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6183,7 +6182,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: e5776f4f07dc2184db1be3102d2b694b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 77f62664975397c45b11e3c2d7338517, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6501,9 +6500,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 379531896646241894, guid: ee34101841131d34595be8db28e4d7ed, type: 3}
   shotPoint: {fileID: 964382586}
-  startTimeBtwShots: 0
+  startTimeBtwShots: 1
   shootButton: {fileID: 0}
-  period: 0.5
   isSpawner: 1
 --- !u!1 &1734301130
 GameObject:
@@ -8950,7 +8948,7 @@ PrefabInstance:
         type: 3}
       propertyPath: pauseMenu
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1216700135}
     - target: {fileID: 6100213516115110955, guid: 67cc14a230808b74d9105ede8152016a,
         type: 3}
       propertyPath: cameraMove

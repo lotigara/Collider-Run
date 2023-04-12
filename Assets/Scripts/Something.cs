@@ -8,4 +8,9 @@ public class Something : MonoBehaviour
     {
         Application.OpenURL("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
     }
+
+    public void Discord()
+    {
+        Application.OpenURL("https://dsc.gg/collider");
+    }
 }

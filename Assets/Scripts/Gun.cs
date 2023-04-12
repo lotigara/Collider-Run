@@ -8,11 +8,11 @@ public class Gun : MonoBehaviour
     public Transform shotPoint;
     private float timeBtwShots;
     public float startTimeBtwShots;
+    private float timeSinceStart = 0;
     public GameObject shootButton;
     private CameraShake cameraShake;
     private Control player;
     private float nextActionTime = 0f;
-    public float period = 1f;
     [SerializeField] bool isSpawner;
 
     public void Start()
@@ -41,11 +41,12 @@ public class Gun : MonoBehaviour
                 timeBtwShots -= Time.deltaTime;
             }
         }
-        else if (Time.time > nextActionTime)
+        else if (timeSinceStart > nextActionTime)
         {
-            nextActionTime += period;
+            nextActionTime += timeBtwShots;
             Shoot();
         }
+        timeSinceStart += Time.deltaTime;
     }
 
     public void Shoot()

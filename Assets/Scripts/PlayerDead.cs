@@ -5,17 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class PlayerDead : MonoBehaviour
 {
-    [SerializeField] Transform spawnPoint;
     public GameObject deathParticle;
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.transform.CompareTag("Respawn"))
+        if (col.transform.CompareTag("Enemy") || col.transform.CompareTag("Respawn"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
-        if (col.transform.CompareTag("Enemy"))
-        {
+            Destroy(GameObject.FindGameObjectWithTag("Enemy"));
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }

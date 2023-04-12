@@ -100,7 +100,6 @@ MonoBehaviour:
   shotPoint: {fileID: 6100213514952247696}
   startTimeBtwShots: 0.25
   shootButton: {fileID: 0}
-  period: 1
   isSpawner: 0
 --- !u!61 &3811247197779135805
 BoxCollider2D:
@@ -297,7 +296,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d7fd95d5b09c1d4894196053b7a02eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 0}
   deathParticle: {fileID: 2387198753694727387, guid: 368c8b448287df342ace7bbccbe61a8f,
     type: 3}
 --- !u!58 &6100213516115110958

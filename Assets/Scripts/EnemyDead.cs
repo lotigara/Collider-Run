@@ -9,7 +9,7 @@ public class EnemyDead : MonoBehaviour
     {
         if (col.transform.CompareTag("Respawn"))
         {
-            this.gameObject.SetActive(false);
+            Destroy(this.gameObject);
         }
     }
 }

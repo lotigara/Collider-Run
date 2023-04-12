@@ -7,10 +7,7 @@ public class LevelFinish : MonoBehaviour
 {
     [SerializeField] GameObject menu;
     [SerializeField] GameObject pauseMenu;
-    [SerializeField] Collider2D col2D;
-    [SerializeField] Control control;
-    [SerializeField] GameObject player;
-    [SerializeField] SpriteRenderer spriteRender;
+    GameObject player;
     [SerializeField] CameraMove cameraMove;
     [SerializeField] PauseMenuOpen menuOpen;
     public int nextLevel;
@@ -21,6 +18,7 @@ public class LevelFinish : MonoBehaviour
         level = PlayerPrefs.GetInt("level");
         menu.SetActive(false);
         pauseMenu.SetActive(false);
+        player = this.gameObject;
         //GameObject go = GameObject.Find("MenuOpener");
         //MenuOpen menuOpen = go.GetComponent<MenuOpen>();
         //bool isLevelFinish = menuOpen.isLevelFinished;
@@ -39,10 +37,7 @@ public class LevelFinish : MonoBehaviour
             }
             menuOpen.isLevelFinished = true;
             menu.SetActive(true);
-            col2D.enabled = false;
-            control.enabled = false;
-            spriteRender.enabled = false;
-            cameraMove.enabled = false;
+            player.SetActive(false);
         }
         else
         {
