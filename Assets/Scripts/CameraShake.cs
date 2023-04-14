@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class CameraShake : MonoBehaviour
 {
-    public Animator cam;
+    private Animator cam;
+
+    public void Start()
+    {
+        cam = this.gameObject.GetComponent<Animator>();
+    }
 
     public void Shake()
     {

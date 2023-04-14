@@ -258,7 +258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   joystick: {fileID: -5016682516741521487, guid: aaa2c939c0359ac4dbce3f49e8b90252,
     type: 3}
-  controlType: 1
+  controlType: 0
   offset: 0
   speed: 1
   mobileSpeed: 250
@@ -328,10 +328,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menu: {fileID: 0}
   pauseMenu: {fileID: 0}
-  col2D: {fileID: 6100213516115110958}
-  control: {fileID: 6100213516115110957}
-  player: {fileID: 0}
-  spriteRender: {fileID: 6100213516115110956}
   cameraMove: {fileID: 4272045307749545711, guid: 958a64062aa21d045afb3bece57e3ff2,
     type: 3}
   menuOpen: {fileID: 0}
