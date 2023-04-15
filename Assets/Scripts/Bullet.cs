@@ -36,6 +36,6 @@ public class Bullet : MonoBehaviour
     public void DestroyBullet()
     {
         Instantiate(destroyParticle, transform.position, Quaternion.identity);
-        Destroy(this.gameObject);
+        Destroy(gameObject);
     }
 }

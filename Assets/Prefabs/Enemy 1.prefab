@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 45
+  isStupid: 1
 --- !u!58 &379531896646241901
 CircleCollider2D:
   m_ObjectHideFlags: 0

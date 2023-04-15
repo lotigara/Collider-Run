@@ -8,7 +8,7 @@ public class CameraShake : MonoBehaviour
 
     public void Start()
     {
-        cam = this.gameObject.GetComponent<Animator>();
+        cam = gameObject.GetComponent<Animator>();
     }
 
     public void Shake()

@@ -8,7 +8,7 @@ public class EnemyDead : MonoBehaviour
     {
         if (col.transform.CompareTag("Respawn"))
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
 }

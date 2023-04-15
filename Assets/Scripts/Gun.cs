@@ -51,8 +51,11 @@ public class Gun : MonoBehaviour
 
     public void Shoot()
     {
+        if (isSpawner == false)
+        {
+            cameraShake.Shake();
+        }
         Instantiate(bullet, shotPoint.position, transform.rotation);
         timeBtwShots = startTimeBtwShots;
-        cameraShake.Shake();
     }
 }

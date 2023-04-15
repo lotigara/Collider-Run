@@ -18,7 +18,7 @@ public class LevelFinish : MonoBehaviour
         level = PlayerPrefs.GetInt("level");
         menu.SetActive(false);
         pauseMenu.SetActive(false);
-        player = this.gameObject;
+        player = gameObject;
         //GameObject go = GameObject.Find("MenuOpener");
         //MenuOpen menuOpen = go.GetComponent<MenuOpen>();
         //bool isLevelFinish = menuOpen.isLevelFinished;
