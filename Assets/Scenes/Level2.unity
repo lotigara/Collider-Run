@@ -6907,7 +6907,7 @@ PrefabInstance:
         type: 3}
       propertyPath: pauseMenu
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1778879530}
     - target: {fileID: 6100213516115110955, guid: 67cc14a230808b74d9105ede8152016a,
         type: 3}
       propertyPath: cameraMove
