@@ -8,7 +8,7 @@ public class PlayerHarassment : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 movement;
     public int speed = 5;
-    public bool isStupid;
+    public bool isOld;
     Transform viewDistance;
 
     void Start()
@@ -19,7 +19,7 @@ public class PlayerHarassment : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (isStupid == false)
+        if (isOld == false)
         {
             if (col.gameObject.CompareTag("Player"))
             {
