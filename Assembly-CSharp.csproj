@@ -63,6 +63,8 @@
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
+    <Compile Include="Assets\NULLcode Studio\Scaner2D\Scripts\Character2DControl.cs" />
+    <Compile Include="Assets\NULLcode Studio\Scaner2D\Scripts\Scaner2D.cs" />
     <Compile Include="Assets\Scripts\AnimGif.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\CameraMove.cs" />
@@ -72,9 +74,11 @@
     <Compile Include="Assets\Scripts\DiscordRpc.cs" />
     <Compile Include="Assets\Scripts\DiscordTime.cs" />
     <Compile Include="Assets\Scripts\EnemyDead.cs" />
+    <Compile Include="Assets\Scripts\EventManager.cs" />
     <Compile Include="Assets\Scripts\FollowPath.cs" />
     <Compile Include="Assets\Scripts\GetGun.cs" />
     <Compile Include="Assets\Scripts\Gun.cs" />
+    <Compile Include="Assets\Scripts\KeysMechanic.cs" />
     <Compile Include="Assets\Scripts\LevelFinish.cs" />
     <Compile Include="Assets\Scripts\LevelsMechanic.cs" />
     <Compile Include="Assets\Scripts\MovementPath.cs" />

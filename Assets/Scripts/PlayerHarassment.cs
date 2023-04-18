@@ -1,6 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
+using static PlayerHarassment;
 
 public class PlayerHarassment : MonoBehaviour
 {
@@ -67,6 +71,7 @@ public class PlayerHarassment : MonoBehaviour
     {
         MoveChar(movement);
     }
+
     private void MoveChar(Vector2 direction)
     {
         rb.MovePosition((Vector2)transform.position + (direction * speed * Time.deltaTime));

@@ -8,7 +8,7 @@ public class CameraMove : MonoBehaviour
 
     void Start()
     {
-        player = GameObject.Find("Player");
+        player = GameObject.FindGameObjectWithTag("Player");
         offset = transform.position - player.transform.position;
     }
 
