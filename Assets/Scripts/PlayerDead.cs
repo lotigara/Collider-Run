@@ -30,7 +30,7 @@ public class PlayerDead : MonoBehaviour
         {
             if (keys == 6 || keys > 6)
             {
-                if (Input.GetKeyUp(KeyCode.Keypad5))
+                if (Input.GetKeyUp(KeyCode.E))
                 {
                     keys = 0;
                     PlayerPrefs.SetInt("custom", 1);
