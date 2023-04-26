@@ -74,8 +74,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2ca5e8cb7b602ba48b6ed6b48b1cd095, type: 3}
-  m_Color: {r: 0, g: 0.578, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 3407c7f3477dfa945bfdfcfc09cfa0ba, type: 3}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -116,12 +116,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &114488045301970978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,13 +136,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetMask:
     serializedVersion: 2
-    m_Bits: 16
+    m_Bits: 512
   ignoreMask:
     serializedVersion: 2
     m_Bits: 2
-  rays: 3
+  rays: 86
   distance: 5
-  angle: 10
+  angle: 360
   rayPoint: {fileID: 4034697088508342}
   speed: 15
 --- !u!1 &1817129070834622
