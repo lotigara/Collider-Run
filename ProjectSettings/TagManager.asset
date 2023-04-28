@@ -13,6 +13,7 @@ TagManager:
   - Bullet
   - Vault
   - Key
+  - BassDestroyable
   layers:
   - Default
   - TransparentFX

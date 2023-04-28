@@ -30,9 +30,9 @@ public class PlayerDead : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("Vault"))
+        if (col.gameObject.tag == "Vault")
         {
-            if (keys == 6 || keys > 6)
+            if (keys >= 6)
             {
                 if (Input.GetKeyUp(KeyCode.E))
                 {
