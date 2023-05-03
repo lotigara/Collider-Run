@@ -101,7 +101,7 @@ MonoBehaviour:
   distance: 0.5
   whatIsSolid:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 1280
   destroyParticle: {fileID: 2387198753694727387, guid: ff719911dc0fc2248b82ae8aac77e1a5,
     type: 3}
 --- !u!61 &2339858656057164699
