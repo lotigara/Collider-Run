@@ -12910,6 +12910,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2302890026261499227, guid: 67cc14a230808b74d9105ede8152016a,
+        type: 3}
+      propertyPath: m_Name
+      value: LoadDistance
+      objectReference: {fileID: 0}
     - target: {fileID: 6100213514903755590, guid: 67cc14a230808b74d9105ede8152016a,
         type: 3}
       propertyPath: shootButton

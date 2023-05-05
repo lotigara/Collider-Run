@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 58744895707238444}
   - component: {fileID: 50094525344741604}
   - component: {fileID: 114488045301970978}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Player
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -144,7 +144,6 @@ MonoBehaviour:
   distance: 5
   angle: 360
   rayPoint: {fileID: 4034697088508342}
-  speed: 15
 --- !u!1 &1817129070834622
 GameObject:
   m_ObjectHideFlags: 0

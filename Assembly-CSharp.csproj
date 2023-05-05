@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\DiscordRpc.cs" />
     <Compile Include="Assets\Scripts\DiscordTime.cs" />
     <Compile Include="Assets\Scripts\EnemyDead.cs" />
+    <Compile Include="Assets\Scripts\EnemyLoadDistance.cs" />
     <Compile Include="Assets\Scripts\EventManager.cs" />
     <Compile Include="Assets\Scripts\FollowPath.cs" />
     <Compile Include="Assets\Scripts\GetGun.cs" />
