@@ -20,15 +20,15 @@ public class PlayerDead : MonoBehaviour
             Destroy(GameObject.FindGameObjectWithTag("Enemy"));
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
-        else if (col.transform.CompareTag("Key"))
+        else col.transform.CompareTag("Key");
         {
             Destroy(col.gameObject);
             keys += 1;
             Debug.Log(keys);
-        }
+        };
     }
 
-    private void OnTriggerEnter2D(Collider2D col)
+    private void OnTriggerStay2D(Collider2D col)
     {
         if (col.gameObject.tag == "Vault")
         {
