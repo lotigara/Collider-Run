@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\CameraMove.cs" />
     <Compile Include="Assets\Scripts\CameraShake.cs" />
     <Compile Include="Assets\Scripts\Control.cs" />
+    <Compile Include="Assets\Scripts\Customization.cs" />
     <Compile Include="Assets\Scripts\DiscordController.cs" />
     <Compile Include="Assets\Scripts\DiscordRpc.cs" />
     <Compile Include="Assets\Scripts\DiscordTime.cs" />

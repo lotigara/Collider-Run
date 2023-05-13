@@ -20,25 +20,30 @@ public class PlayerDead : MonoBehaviour
             Destroy(GameObject.FindGameObjectWithTag("Enemy"));
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
-        else col.transform.CompareTag("Key");
+        else if (col.transform.CompareTag("Key"))
         {
             Destroy(col.gameObject);
             keys += 1;
             Debug.Log(keys);
-        };
+        }
     }
 
     private void OnTriggerStay2D(Collider2D col)
     {
         if (col.gameObject.tag == "Vault")
         {
-            if (keys >= 6)
+            if (Input.GetKeyUp(KeyCode.E))
             {
-                if (Input.GetKeyUp(KeyCode.E))
+                if (keys == 6)
                 {
-                    keys = 0;
                     PlayerPrefs.SetInt("custom", 1);
                     Debug.Log("Vault is open! Keys: " + keys);
+                }
+                if (keys >= 7 )
+                {
+                    keys = 0;
+                    PlayerPrefs.SetString("clothes", PlayerPrefs.GetString("clothes") + "secret, ");
+                    Debug.Log("You are not a cheater! You will get the no ban on my Discord server!");
                 }
             }
         }
