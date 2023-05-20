@@ -8,10 +8,10 @@ public class EnemyLoadDistance : MonoBehaviour
     public ArrayList enemies;
     private void Start()
     {
-        enemies.AddRange (GameObject.FindGameObjectsWithTag("Enemy"));
+        enemies.AddRange(GameObject.FindGameObjectsWithTag("Enemy"));
         foreach (GameObject enemy in enemies)
         {
-             scaner2d.Add(enemy.GetComponent<Scaner2D>());
+            scaner2d.Add(enemy.GetComponent<Scaner2D>());
         }
 
     }

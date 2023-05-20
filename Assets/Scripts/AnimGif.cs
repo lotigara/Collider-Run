@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class AnimGif : MonoBehaviour
 {
     public Texture2D[] frame;
-    private float framePerSecond = 15f;
+    public float framePerSecond = 15f;
 
     private RawImage image = null;
     private Renderer render = null;

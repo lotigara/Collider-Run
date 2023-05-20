@@ -29,15 +29,6 @@ public class Control : MonoBehaviour
         {
             joystick.gameObject.SetActive(false);
         }
-        /*if (PlayerPrefs.GetInt("platform") == 0)
-        {
-            controlType = ControlType.PC;
-
-        }
-        else if (PlayerPrefs.GetInt("platform") == 1)
-        {
-            controlType = ControlType.Android;
-        }*/
     }
 
     void FixedUpdate()

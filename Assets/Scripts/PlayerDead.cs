@@ -41,9 +41,12 @@ public class PlayerDead : MonoBehaviour
                 }
                 if (keys >= 7 )
                 {
-                    keys = 0;
-                    PlayerPrefs.SetString("clothes", PlayerPrefs.GetString("clothes") + "secret, ");
-                    Debug.Log("You are not a cheater! You will get the no ban on my Discord server!");
+                    if (!! PlayerPrefs.GetString("clothes").Contains("secret/"))
+                    {
+                        PlayerPrefs.SetString("clothes", PlayerPrefs.GetString("clothes") + "secret/");
+                        Debug.Log(PlayerPrefs.GetString("clothes"));
+                    }
+                    Debug.Log("You are not a cheater! You will get no ban on my Discord server!");
                 }
             }
         }
