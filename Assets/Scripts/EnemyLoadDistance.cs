@@ -13,22 +13,13 @@ public class EnemyLoadDistance : MonoBehaviour
         {
             scaner2d.Add(enemy.GetComponent<Scaner2D>());
         }
-
     }
 
-    private void OnTriggerEnter2D(Collider2D col)
+    private void OnTriggerStay2D(Collider2D col)
     {
-        if (enemies.Contains(col.gameObject))
+        if (col.gameObject.tag == "Enemy")
         {
             col.gameObject.GetComponent<Scaner2D>().enabled = true;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D col)
-    {
-        if (enemies.Contains(col.gameObject))
-        {
-            col.gameObject.GetComponent<Scaner2D>().enabled = false;
         }
     }
 }
