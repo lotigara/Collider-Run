@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class EnemyLoadDistance : MonoBehaviour
 {
-    private ArrayList scaner2d;
-    public ArrayList enemies;
+    private GameObject cam;
+    private Collider2D ldt; // дистанция прогрузки
     private void Start()
     {
-        enemies.AddRange(GameObject.FindGameObjectsWithTag("Enemy"));
-        foreach (GameObject enemy in enemies)
-        {
-            scaner2d.Add(enemy.GetComponent<Scaner2D>());
-        }
+        cam = GameObject.FindGameObjectWithTag("Camera");
+        ldt = GetComponent<Collider2D>();
+        // задаю параметр коллайдера size на разрешение окна приложения (screen.width и screen.height), умножая на размер камеры
     }
 
     private void OnTriggerStay2D(Collider2D col)
