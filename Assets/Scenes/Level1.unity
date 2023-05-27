@@ -397,6 +397,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8444deef4a5fd6145a2f57247a398f6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!20 &60207677 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 4272045307749545710, guid: 958a64062aa21d045afb3bece57e3ff2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1268664778}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &109305418
 GameObject:
   m_ObjectHideFlags: 0
@@ -1714,8 +1720,8 @@ Canvas:
   m_GameObject: {fileID: 465581058}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 60207677}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1724,7 +1730,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 80
   m_TargetDisplay: 0
 --- !u!224 &465581062
 RectTransform:
@@ -4953,7 +4959,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1483171942
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5030,7 +5036,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1485104288
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5954,6 +5960,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4317438899913350524, guid: 67cc14a230808b74d9105ede8152016a,
+        type: 3}
+      propertyPath: m_Name
+      value: Load Distance
+      objectReference: {fileID: 0}
+    - target: {fileID: 5058843850343627155, guid: 67cc14a230808b74d9105ede8152016a,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5058843850343627155, guid: 67cc14a230808b74d9105ede8152016a,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.0001
+      objectReference: {fileID: 0}
     - target: {fileID: 6100213514903755588, guid: 67cc14a230808b74d9105ede8152016a,
         type: 3}
       propertyPath: m_IsActive
@@ -6457,6 +6478,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fixed Joystick
+      objectReference: {fileID: 0}
+    - target: {fileID: 8135886326569738825, guid: 56fae09712773584fb63896d473a98ee,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8135886327475159579, guid: 56fae09712773584fb63896d473a98ee,
         type: 3}

@@ -29,6 +29,10 @@ public class Control : MonoBehaviour
         {
             joystick.gameObject.SetActive(false);
         }
+        else
+        {
+            joystick.gameObject.SetActive(true);
+        }
     }
 
     void FixedUpdate()
