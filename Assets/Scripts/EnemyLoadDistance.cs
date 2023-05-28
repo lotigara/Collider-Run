@@ -10,10 +10,10 @@ public class EnemyLoadDistance : MonoBehaviour
     {
         // задаю значения переменных
         cam = GameObject.FindGameObjectWithTag("Camera").GetComponent<Camera>();
-        ldt = GetComponent<BoxCollider2D>();
+        ldt = this.gameObject.GetComponent<BoxCollider2D>();
 
         // задаю параметр коллайдера Size на разрешение всего экрана (screen.width и screen.height), умножая на размер камеры (125)
-        ldt.size = new Vector2(GetComponentInParent<RectTransform>().rect.width, GetComponentInParent<RectTransform>().rect.height);
+        ldt.size = new Vector2(Screen.currentResolution.width, Screen.currentResolution.height) / 125 * 3;
     }
 
     private void OnTriggerStay2D(Collider2D col)
