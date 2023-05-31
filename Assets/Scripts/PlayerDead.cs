@@ -7,6 +7,15 @@ using UnityEngine.UI;
 public class PlayerDead : MonoBehaviour
 {
     public GameObject deathParticle;
+    public GameObject beforeLaser;
+    public GameObject beforeLaserParticle;
+    public GameObject beforeSwitcher;
+    public GameObject afterLaser;
+    public GameObject afterLaserParticle;
+    public GameObject finishLaser;
+    public GameObject finishLaserParticle;
+    public GameObject afterSwitcher;
+    public GameObject deathPanel;
     private Boss boss;
     private int keys;
     public float health = 1;
@@ -58,13 +67,22 @@ public class PlayerDead : MonoBehaviour
             }
         }
 
-        if (col.gameObject.tag == "Switcher")
+        if (col.gameObject == beforeSwitcher)
         {
             if (Input.GetKeyUp(KeyCode.E))
             {
                 col.gameObject.GetComponent<Animator>().SetTrigger("activate");
-                GameObject.FindGameObjectWithTag("LaserDoor").SetActive(false);
-                GameObject.FindGameObjectWithTag("LaserParticle").SetActive(false);
+                beforeLaser.SetActive(false);
+                beforeLaserParticle.SetActive(false);
+            }
+        }
+        if (col.gameObject == afterSwitcher)
+        {
+            if (Input.GetKeyUp(KeyCode.E))
+            {
+                col.gameObject.GetComponent<Animator>().SetTrigger("activate");
+                finishLaser.SetActive(false);
+                finishLaserParticle.SetActive(false);
             }
         }
         if (col.gameObject.tag == "BossTrigger")
@@ -75,15 +93,6 @@ public class PlayerDead : MonoBehaviour
                 boss.gameObject.SetActive(true);
                 boss.Aim(transform);
             }
-            /*boss.Appear(10);
-            if (Time.time > nextActionTime)
-            {
-                nextActionTime += period;
-                for (int i = 10; i > 0; i --)
-                {
-                    GameObject.FindGameObjectWithTag("ReadyText").GetComponent<Text>().text = $"{i}";
-                }
-            }*/
         }
     }
     public void TakeDamage(float damage)
@@ -95,7 +104,7 @@ public class PlayerDead : MonoBehaviour
     {
         if (health <= 0)
         {
-            Destroy(gameObject);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }

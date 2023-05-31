@@ -100,6 +100,7 @@ MonoBehaviour:
   shotPoint: {fileID: 6100213514952247696}
   startTimeBtwShots: 0.25
   shootButton: {fileID: 0}
+  gunType: 0
   isSpawner: 0
 --- !u!61 &3811247197779135805
 BoxCollider2D:
@@ -298,6 +299,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathParticle: {fileID: 2387198753694727387, guid: 368c8b448287df342ace7bbccbe61a8f,
     type: 3}
+  beforeLaser: {fileID: 0}
+  afterLaser: {fileID: 0}
+  deathPanel: {fileID: 0}
+  health: 1
 --- !u!58 &6100213516115110958
 CircleCollider2D:
   m_ObjectHideFlags: 0
