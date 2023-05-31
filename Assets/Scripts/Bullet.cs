@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
     public float speed;
     public float lifetime;
     public float distance;
+    public float damage = 1;
     public LayerMask whatIsSolid;
     public GameObject destroyParticle;
 
@@ -22,11 +23,19 @@ public class Bullet : MonoBehaviour
         {
             if(hitInfo.collider.CompareTag("Enemy"))
             {
-                Destroy(hitInfo.collider.gameObject);
+                hitInfo.collider.gameObject.GetComponent<EnemyDead>().TakeDamage(damage);
             }
-            if(hitInfo.collider.CompareTag("Destroyable"))
+            else if (hitInfo.collider.CompareTag("Boss"))
+            {
+                hitInfo.collider.gameObject.GetComponent<EnemyDead>().TakeDamage(damage);
+            }
+            else if(hitInfo.collider.CompareTag("Destroyable"))
             {
                 Destroy(hitInfo.collider.gameObject);
+            }
+            else if (hitInfo.collider.CompareTag("Player"))
+            {
+                hitInfo.collider.gameObject.GetComponent<PlayerDead>().TakeDamage(damage);
             }
             DestroyBullet();
         }

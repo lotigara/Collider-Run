@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 379531896646241901}
   - component: {fileID: 379531896646241898}
   - component: {fileID: 379531896646241900}
-  - component: {fileID: 1636637853111527228}
+  - component: {fileID: -1486536084057849060}
   m_Layer: 10
   m_Name: Enemy
   m_TagString: Enemy
@@ -134,26 +134,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b29a53c340692a24f82bc33a27308139, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1636637853111527228
+  health: 1
+--- !u!114 &-1486536084057849060
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 379531896646241894}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39ab67b155d249a41bd4f45551843870, type: 3}
+  m_Script: {fileID: 11500000, guid: 307b7835fcb07134fadf8b41215e8f1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetMask:
-    serializedVersion: 2
-    m_Bits: 512
-  ignoreMask:
-    serializedVersion: 2
-    m_Bits: 1025
-  rays: 86
-  distance: 50
-  angle: 360
-  rayPoint: {fileID: 379531896646241896}
-  speed: 30
+  speed: 15
+  isOld: 1

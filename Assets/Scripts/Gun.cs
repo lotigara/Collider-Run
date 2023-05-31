@@ -10,9 +10,12 @@ public class Gun : MonoBehaviour
     public float startTimeBtwShots;
     private float timeSinceStart = 0;
     public GameObject shootButton;
+    private Boss boss;
     private CameraShake cameraShake;
     private Control player;
     private float nextActionTime = 0f;
+    private enum GunType { Player, Spawner, Enemy }
+    [SerializeField] private GunType gunType;
     [SerializeField] bool isSpawner;
 
     public void Start()
@@ -23,11 +26,15 @@ public class Gun : MonoBehaviour
         {
             shootButton.SetActive(false);
         }
+        if (player.controlType == Control.ControlType.Android)
+        {
+            shootButton.SetActive(true);
+        }
     }
 
     void Update()
     {
-        if (isSpawner == false)
+        if (gunType == GunType.Player)
         {
             if (timeBtwShots <= 0)
             {
@@ -41,7 +48,7 @@ public class Gun : MonoBehaviour
                 timeBtwShots -= Time.deltaTime;
             }
         }
-        else if (timeSinceStart > nextActionTime)
+        else if (gunType == GunType.Spawner && timeSinceStart > nextActionTime)
         {
             nextActionTime += timeBtwShots;
             Shoot();
@@ -51,7 +58,7 @@ public class Gun : MonoBehaviour
 
     public void Shoot()
     {
-        if (isSpawner == false)
+        if (gunType != GunType.Spawner && gunType != GunType.Enemy)
         {
             cameraShake.Shake();
         }

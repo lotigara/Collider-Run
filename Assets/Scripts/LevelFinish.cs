@@ -19,9 +19,6 @@ public class LevelFinish : MonoBehaviour
         menu.SetActive(false);
         pauseMenu.SetActive(false);
         player = gameObject;
-        //GameObject go = GameObject.Find("MenuOpener");
-        //MenuOpen menuOpen = go.GetComponent<MenuOpen>();
-        //bool isLevelFinish = menuOpen.isLevelFinished;
     }
     private void OnCollisionEnter2D(Collision2D col)
     {

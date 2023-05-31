@@ -11,10 +11,8 @@ public class Control : MonoBehaviour
     public float offset;
     public float speed = 1f;
     public float mobileSpeed = 60;
-    private Vector3 mouse;
     public Rigidbody2D rb;
     private float rotZ;
-    private Vector3 difference;
     private Vector3 pos;
     
     public enum ControlType
@@ -24,7 +22,6 @@ public class Control : MonoBehaviour
     }
     void Start()
     {
-        mouse = Input.mousePosition;
         if (controlType == ControlType.PC)
         {
             joystick.gameObject.SetActive(false);

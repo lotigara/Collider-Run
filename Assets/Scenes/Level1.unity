@@ -967,6 +967,7 @@ GameObject:
   - component: {fileID: 207462332}
   - component: {fileID: 207462331}
   - component: {fileID: 207462334}
+  - component: {fileID: 207462333}
   m_Layer: 0
   m_Name: Bounce
   m_TagString: Respawn
@@ -1054,6 +1055,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &207462333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 207462329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b29a53c340692a24f82bc33a27308139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
 --- !u!114 &207462334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3487,11 +3501,6 @@ PrefabInstance:
       objectReference: {fileID: 1109564213}
     - target: {fileID: 1700345659555075987, guid: 0df54577fbfa9784387cd514364c22d5,
         type: 3}
-      propertyPath: levelMenu
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1700345659555075987, guid: 0df54577fbfa9784387cd514364c22d5,
-        type: 3}
       propertyPath: cameraMove
       value: 
       objectReference: {fileID: 538895696}
@@ -4200,6 +4209,7 @@ GameObject:
   - component: {fileID: 1181242120}
   - component: {fileID: 1181242119}
   - component: {fileID: 1181242118}
+  - component: {fileID: 1181242121}
   m_Layer: 0
   m_Name: Bounce (1)
   m_TagString: Respawn
@@ -4303,6 +4313,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1181242121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181242116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b29a53c340692a24f82bc33a27308139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
 --- !u!1 &1218390580
 GameObject:
   m_ObjectHideFlags: 0
@@ -4315,6 +4338,7 @@ GameObject:
   - component: {fileID: 1218390584}
   - component: {fileID: 1218390583}
   - component: {fileID: 1218390582}
+  - component: {fileID: 1218390585}
   m_Layer: 0
   m_Name: Bounce (2)
   m_TagString: Respawn
@@ -4418,6 +4442,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1218390585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218390580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b29a53c340692a24f82bc33a27308139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
 --- !u!1001 &1268664778
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6040,6 +6077,46 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Load Distance
+      objectReference: {fileID: 0}
+    - target: {fileID: 5735298846945442750, guid: 67cc14a230808b74d9105ede8152016a,
+        type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
+      value: -17
+      objectReference: {fileID: 0}
+    - target: {fileID: 5735298846945442750, guid: 67cc14a230808b74d9105ede8152016a,
+        type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].y
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5735298846945442750, guid: 67cc14a230808b74d9105ede8152016a,
+        type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].x
+      value: -17
+      objectReference: {fileID: 0}
+    - target: {fileID: 5735298846945442750, guid: 67cc14a230808b74d9105ede8152016a,
+        type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5735298846945442750, guid: 67cc14a230808b74d9105ede8152016a,
+        type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].x
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 5735298846945442750, guid: 67cc14a230808b74d9105ede8152016a,
+        type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5735298846945442750, guid: 67cc14a230808b74d9105ede8152016a,
+        type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].x
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 5735298846945442750, guid: 67cc14a230808b74d9105ede8152016a,
+        type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].y
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 6100213514903755588, guid: 67cc14a230808b74d9105ede8152016a,
         type: 3}

@@ -1772,6 +1772,7 @@ GameObject:
   - component: {fileID: 207462332}
   - component: {fileID: 207462331}
   - component: {fileID: 207462334}
+  - component: {fileID: 207462333}
   m_Layer: 8
   m_Name: Bounce
   m_TagString: Enemy
@@ -1859,6 +1860,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &207462333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 207462329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b29a53c340692a24f82bc33a27308139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
 --- !u!114 &207462334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2614,7 +2628,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &350886200
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3850,7 +3864,7 @@ Canvas:
   m_GameObject: {fileID: 465581058}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -3860,7 +3874,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!224 &465581062
 RectTransform:
@@ -8642,6 +8656,7 @@ GameObject:
   - component: {fileID: 1181242120}
   - component: {fileID: 1181242119}
   - component: {fileID: 1181242118}
+  - component: {fileID: 1181242121}
   m_Layer: 8
   m_Name: Bounce (1)
   m_TagString: Enemy
@@ -8745,6 +8760,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1181242121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181242116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b29a53c340692a24f82bc33a27308139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
 --- !u!1 &1190988367
 GameObject:
   m_ObjectHideFlags: 0
@@ -9097,6 +9125,7 @@ GameObject:
   - component: {fileID: 1218390584}
   - component: {fileID: 1218390583}
   - component: {fileID: 1218390582}
+  - component: {fileID: 1218390585}
   m_Layer: 8
   m_Name: Bounce (2)
   m_TagString: Enemy
@@ -9200,6 +9229,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1218390585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218390580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b29a53c340692a24f82bc33a27308139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
 --- !u!1 &1233448768
 GameObject:
   m_ObjectHideFlags: 0
@@ -10694,14 +10736,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1443082452}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c76ae15fc8e0ed94497c87679d881c07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 379531896646241894, guid: 0f3345d58176a444b94b6b470b216437, type: 3}
+  bullet: {fileID: 379531896646241894, guid: c8a58043488aafb4abdcc1fea2db0e5b, type: 3}
   shotPoint: {fileID: 2075575256}
-  startTimeBtwShots: 0.5
+  startTimeBtwShots: 0.1
   shootButton: {fileID: 0}
   isSpawner: 1
 --- !u!1 &1448169885
@@ -10910,7 +10952,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1483171942
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11636,6 +11678,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fixed Joystick
+      objectReference: {fileID: 0}
+    - target: {fileID: 8135886326569738825, guid: 56fae09712773584fb63896d473a98ee,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56fae09712773584fb63896d473a98ee, type: 3}
@@ -13265,12 +13312,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1697909226}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c76ae15fc8e0ed94497c87679d881c07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 379531896646241894, guid: 0f3345d58176a444b94b6b470b216437, type: 3}
+  bullet: {fileID: 379531896646241894, guid: c8a58043488aafb4abdcc1fea2db0e5b, type: 3}
   shotPoint: {fileID: 1920317037}
   startTimeBtwShots: 0.5
   shootButton: {fileID: 0}
@@ -16369,7 +16416,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2136235492
 RectTransform:
   m_ObjectHideFlags: 0

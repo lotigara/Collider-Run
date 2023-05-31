@@ -5,38 +5,36 @@ using UnityEngine;
 public class PauseMenuOpen : MonoBehaviour
 {
     [SerializeField] private GameObject menu;
-    [HideInInspector] public GameObject levelMenu;
-    [HideInInspector] public KeyCode key = KeyCode.Escape;
-    [HideInInspector] public Collider2D col2D;
-    [HideInInspector] public Control control;
-    [HideInInspector] public SpriteRenderer spriteRender;
-    [HideInInspector] public CameraMove cameraMove;
-    [HideInInspector] public GameObject player;
-    [HideInInspector] public bool isLevelFinished;
+    private KeyCode key = KeyCode.Escape;
+    private GameObject player;
+    public bool isLevelFinished;
     bool isMenuOpen;
 
     public void Start()
     {
-        GameCloseMenu(menu);
         player = GameObject.FindGameObjectWithTag("Player");
         isMenuOpen = false;
     }
     public void GameOpenMenu(GameObject openMenu)
     {
+        isMenuOpen = true;
         openMenu.SetActive(true);
         player.SetActive(false);
     }
     public void GameCloseMenu(GameObject closeMenu)
     {
+        isMenuOpen = false;
         closeMenu.SetActive(false);
         player.SetActive(true);
     }
     public void OpenMenu(GameObject openMenu)
     {
+        isMenuOpen = true;
         openMenu.SetActive(true);
     }
     public void CloseMenu(GameObject closeMenu)
     {
+        isMenuOpen = false;
         closeMenu.SetActive(false);
     }
     public void Update()

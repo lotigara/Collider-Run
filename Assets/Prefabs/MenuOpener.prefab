@@ -46,11 +46,9 @@ MonoBehaviour:
   menu: {fileID: 0}
   levelMenu: {fileID: 0}
   key: 27
-  col2D: {fileID: 6100213516115110958, guid: 67cc14a230808b74d9105ede8152016a, type: 3}
-  control: {fileID: 6100213516115110957, guid: 67cc14a230808b74d9105ede8152016a, type: 3}
-  spriteRender: {fileID: 6100213516115110956, guid: 67cc14a230808b74d9105ede8152016a,
-    type: 3}
-  cameraMove: {fileID: 4272045307749545711, guid: 958a64062aa21d045afb3bece57e3ff2,
-    type: 3}
+  col2D: {fileID: 0}
+  control: {fileID: 0}
+  spriteRender: {fileID: 0}
+  cameraMove: {fileID: 0}
+  player: {fileID: 0}
   isLevelFinished: 0
-  isMenuOpen: 0
