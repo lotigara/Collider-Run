@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class Boss : MonoBehaviour
 {
+    private Transform player;
+    private float timeBtwShots;
+    public float startTimeBtwShots;
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+    }
+
     public void Aim(Transform player)
     {
         transform.rotation = Quaternion.Euler
@@ -14,18 +23,33 @@ public class Boss : MonoBehaviour
             )
             * Mathf.Rad2Deg
         );
-        GetComponent<Gun>().Shoot();
+        if (GetComponent<Gun>().patrons > 0)
+        {
+            if (timeBtwShots <= 0)
+            {
+                GetComponent<Gun>().Shoot();
+            }
+            else
+            {
+                timeBtwShots -= Time.deltaTime;
+            }
+        }
     }
 
-    public bool isDefeated()
+    public void Fight()
     {
-        if (gameObject.activeSelf == true)
+        if (GetComponent<Gun>().patrons > 0)
         {
-            return false;
+            Aim(player);
         }
-        else
+        else if (GetComponent<Gun>().patrons <= 0)
         {
-            return true;
+            GetComponent<PlayerHarassment>().enabled = true;
+            if (GetComponent<EnemyDead>().health <= 10)
+            {
+                GetComponent<PlayerHarassment>().enabled = false;
+                GetComponent<Gun>().patrons = 15;
+            }
         }
     }
 }

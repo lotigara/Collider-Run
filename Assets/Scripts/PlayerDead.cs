@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class PlayerDead : MonoBehaviour
 {
@@ -15,17 +14,13 @@ public class PlayerDead : MonoBehaviour
     public GameObject finishLaser;
     public GameObject finishLaserParticle;
     public GameObject afterSwitcher;
-    public GameObject deathPanel;
-    private Boss boss;
+    //public GameObject deathPanel;
+    public Boss boss;
     private int keys;
     public float health = 1;
-    private float timeLeft = 5;
-    /*private float nextActionTime = 0.0f;
-    private float period = 1.0f;*/
 
     public void Start()
     {
-        boss = GameObject.FindGameObjectWithTag("Boss").GetComponent<Boss>();
         keys = 0;
     }
 
@@ -42,6 +37,17 @@ public class PlayerDead : MonoBehaviour
             keys += 1;
             Debug.Log(keys);
         }
+        else if (col.transform.CompareTag("Speed"))
+        {
+            Destroy(col.gameObject);
+            GetComponent<Control>().speed = GetComponent<Control>().speed * 2;
+            GetComponent<Control>().mobileSpeed = GetComponent<Control>().mobileSpeed * 2;
+        }
+        else if (col.transform.CompareTag("Health"))
+        {
+            Destroy(col.gameObject);
+            health += 4;
+        }
     }
 
     private void OnTriggerStay2D(Collider2D col)
@@ -57,11 +63,6 @@ public class PlayerDead : MonoBehaviour
                 }
                 if (keys >= 7 )
                 {
-                    if (!! PlayerPrefs.GetString("clothes").Contains("secret/"))
-                    {
-                        PlayerPrefs.SetString("clothes", PlayerPrefs.GetString("clothes") + "secret/");
-                        Debug.Log(PlayerPrefs.GetString("clothes"));
-                    }
                     Debug.Log("You are not a cheater! You will get no ban on my Discord server!");
                 }
             }
@@ -71,6 +72,7 @@ public class PlayerDead : MonoBehaviour
         {
             if (Input.GetKeyUp(KeyCode.E))
             {
+                boss.gameObject.SetActive(true);
                 col.gameObject.GetComponent<Animator>().SetTrigger("activate");
                 beforeLaser.SetActive(false);
                 beforeLaserParticle.SetActive(false);
@@ -83,16 +85,20 @@ public class PlayerDead : MonoBehaviour
                 col.gameObject.GetComponent<Animator>().SetTrigger("activate");
                 finishLaser.SetActive(false);
                 finishLaserParticle.SetActive(false);
+                beforeLaser.SetActive(false);
+                beforeLaserParticle.SetActive(false);
             }
         }
         if (col.gameObject.tag == "BossTrigger")
         {
-            timeLeft -= Time.deltaTime;
-            if (timeLeft < 0)
-            {
-                boss.gameObject.SetActive(true);
-                boss.Aim(transform);
-            }
+            boss.Fight();
+            beforeLaser.SetActive(true);
+            beforeLaserParticle.SetActive(true);
+        }
+        if (GameObject.FindGameObjectWithTag("Boss") == null)
+        {
+            afterLaser.SetActive(false);
+            afterLaserParticle.SetActive(false);
         }
     }
     public void TakeDamage(float damage)

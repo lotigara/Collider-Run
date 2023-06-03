@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2339858656057164699}
   - component: {fileID: 2139277426814346881}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: Bullet 1
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102,7 +102,7 @@ MonoBehaviour:
   damage: 1
   whatIsSolid:
     serializedVersion: 2
-    m_Bits: 1280
+    m_Bits: 768
   destroyParticle: {fileID: 2387198753694727387, guid: ff719911dc0fc2248b82ae8aac77e1a5,
     type: 3}
 --- !u!61 &2339858656057164699

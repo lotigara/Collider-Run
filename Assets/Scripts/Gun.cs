@@ -10,10 +10,11 @@ public class Gun : MonoBehaviour
     public float startTimeBtwShots;
     private float timeSinceStart = 0;
     public GameObject shootButton;
-    private Boss boss;
+    //private Boss boss;
     private CameraShake cameraShake;
     private Control player;
     private float nextActionTime = 0f;
+    public int patrons;
     private enum GunType { Player, Spawner, Enemy }
     [SerializeField] private GunType gunType;
     [SerializeField] bool isSpawner;
@@ -22,11 +23,11 @@ public class Gun : MonoBehaviour
     {
         cameraShake = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraShake>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Control>();
-        if (player.controlType == Control.ControlType.PC)
+        if (player.controlType == Control.ControlType.PC && gunType == GunType.Player)
         {
             shootButton.SetActive(false);
         }
-        if (player.controlType == Control.ControlType.Android)
+        if (player.controlType == Control.ControlType.Android && gunType == GunType.Player)
         {
             shootButton.SetActive(true);
         }
@@ -53,12 +54,28 @@ public class Gun : MonoBehaviour
             nextActionTime += timeBtwShots;
             Shoot();
         }
+        if (gunType == GunType.Enemy)
+        {
+            if (timeBtwShots <= 0)
+            {
+                Shoot();
+            }
+            else
+            {
+                timeBtwShots -= Time.deltaTime;
+            }
+        }
         timeSinceStart += Time.deltaTime;
     }
 
     public void Shoot()
     {
-        if (gunType != GunType.Spawner && gunType != GunType.Enemy)
+        
+        if (gunType == GunType.Enemy)
+        {
+            patrons -= 1;
+        }
+        else if (gunType != GunType.Spawner && gunType != GunType.Enemy)
         {
             cameraShake.Shake();
         }
