@@ -17,7 +17,6 @@ public class Gun : MonoBehaviour
     public int patrons;
     private enum GunType { Player, Spawner, Enemy }
     [SerializeField] private GunType gunType;
-    [SerializeField] bool isSpawner;
 
     public void Start()
     {
@@ -54,17 +53,6 @@ public class Gun : MonoBehaviour
             nextActionTime += timeBtwShots;
             Shoot();
         }
-        if (gunType == GunType.Enemy)
-        {
-            if (timeBtwShots <= 0)
-            {
-                Shoot();
-            }
-            else
-            {
-                timeBtwShots -= Time.deltaTime;
-            }
-        }
         timeSinceStart += Time.deltaTime;
     }
 
@@ -79,7 +67,14 @@ public class Gun : MonoBehaviour
         {
             cameraShake.Shake();
         }
-        Instantiate(bullet, shotPoint.position, transform.rotation);
-        timeBtwShots = startTimeBtwShots;
+        if (timeBtwShots <= 0)
+        {
+            Instantiate(bullet, shotPoint.position, transform.rotation);
+            timeBtwShots = startTimeBtwShots;
+        }
+        else
+        {
+            timeBtwShots -= Time.deltaTime;
+        }
     }
 }
