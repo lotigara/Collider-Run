@@ -5,8 +5,6 @@ using UnityEngine;
 public class Boss : MonoBehaviour
 {
     private Transform player;
-    private float timeBtwShots;
-    public float startTimeBtwShots;
 
     private void Start()
     {
@@ -25,31 +23,28 @@ public class Boss : MonoBehaviour
         );
         if (GetComponent<Gun>().patrons > 0)
         {
-            if (timeBtwShots <= 0)
+            if (GetComponent<Gun>().timeBtwShots <= 0)
             {
                 GetComponent<Gun>().Shoot();
             }
             else
             {
-                timeBtwShots -= Time.deltaTime;
+                GetComponent<Gun>().timeBtwShots -= Time.deltaTime;
             }
         }
     }
 
     public void Fight()
     {
-        if (GetComponent<Gun>().patrons > 0)
-        {
-            Aim(player);
-        }
-        else if (GetComponent<Gun>().patrons <= 0)
+        Aim(player);
+        if (GetComponent<Gun>().patrons <= 0)
         {
             GetComponent<PlayerHarassment>().enabled = true;
-            if (GetComponent<EnemyDead>().health <= 10)
-            {
-                GetComponent<PlayerHarassment>().enabled = false;
-                GetComponent<Gun>().patrons = 15;
-            }
+        }
+        else if (GetComponent<EnemyDead>().health == 10 || GetComponent<EnemyDead>().health == 5)
+        {
+            GetComponent<PlayerHarassment>().enabled = false;
+            GetComponent<Gun>().patrons = 15;
         }
     }
 }

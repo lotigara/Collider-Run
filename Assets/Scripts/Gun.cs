@@ -6,7 +6,7 @@ public class Gun : MonoBehaviour
 {
     public GameObject bullet;
     public Transform shotPoint;
-    private float timeBtwShots;
+    [HideInInspector] public float timeBtwShots;
     public float startTimeBtwShots;
     private float timeSinceStart = 0;
     public GameObject shootButton;
@@ -17,7 +17,6 @@ public class Gun : MonoBehaviour
     public int patrons;
     private enum GunType { Player, Spawner, Enemy }
     [SerializeField] private GunType gunType;
-    [SerializeField] bool isSpawner;
 
     public void Start()
     {
@@ -53,17 +52,6 @@ public class Gun : MonoBehaviour
         {
             nextActionTime += timeBtwShots;
             Shoot();
-        }
-        if (gunType == GunType.Enemy)
-        {
-            if (timeBtwShots <= 0)
-            {
-                Shoot();
-            }
-            else
-            {
-                timeBtwShots -= Time.deltaTime;
-            }
         }
         timeSinceStart += Time.deltaTime;
     }

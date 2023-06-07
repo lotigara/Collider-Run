@@ -95,11 +95,6 @@ public class PlayerDead : MonoBehaviour
             beforeLaser.SetActive(true);
             beforeLaserParticle.SetActive(true);
         }
-        if (GameObject.FindGameObjectWithTag("Boss") == null)
-        {
-            afterLaser.SetActive(false);
-            afterLaserParticle.SetActive(false);
-        }
     }
     public void TakeDamage(float damage)
     {
@@ -111,6 +106,11 @@ public class PlayerDead : MonoBehaviour
         if (health <= 0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        if (boss == null && SceneManager.GetActiveScene().buildIndex == 8)
+        {
+            afterLaser.SetActive(false);
+            afterLaserParticle.SetActive(false);
         }
     }
 }

@@ -98,11 +98,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 7276885266774911914, guid: 2db5e21d69b3c6d438ffb1a800f3e5bf, type: 3}
   shotPoint: {fileID: 6100213514952247696}
+  timeBtwShots: 0
   startTimeBtwShots: 0.25
   shootButton: {fileID: 0}
   patrons: 0
   gunType: 0
-  isSpawner: 0
 --- !u!61 &3811247197779135805
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -260,7 +260,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   joystick: {fileID: -5016682516741521487, guid: aaa2c939c0359ac4dbce3f49e8b90252,
     type: 3}
-  controlType: 1
+  controlType: 0
   offset: 0
   speed: 1
   mobileSpeed: 250
