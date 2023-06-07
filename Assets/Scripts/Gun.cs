@@ -6,7 +6,7 @@ public class Gun : MonoBehaviour
 {
     public GameObject bullet;
     public Transform shotPoint;
-    private float timeBtwShots;
+    [HideInInspector] public float timeBtwShots;
     public float startTimeBtwShots;
     private float timeSinceStart = 0;
     public GameObject shootButton;

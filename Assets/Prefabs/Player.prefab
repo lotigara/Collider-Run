@@ -98,11 +98,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 7276885266774911914, guid: 2db5e21d69b3c6d438ffb1a800f3e5bf, type: 3}
   shotPoint: {fileID: 6100213514952247696}
+  timeBtwShots: 0
   startTimeBtwShots: 0.25
   shootButton: {fileID: 0}
   patrons: 0
   gunType: 0
-  isSpawner: 0
 --- !u!61 &3811247197779135805
 BoxCollider2D:
   m_ObjectHideFlags: 0
