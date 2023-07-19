@@ -6497,6 +6497,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 465581062}
     m_Modifications:
+    - target: {fileID: 3766194597305147949, guid: 56fae09712773584fb63896d473a98ee,
+        type: 3}
+      propertyPath: m_Name
+      value: PauseButton
+      objectReference: {fileID: 0}
     - target: {fileID: 8135886326569738822, guid: 56fae09712773584fb63896d473a98ee,
         type: 3}
       propertyPath: m_Pivot.x
